@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/wiremocktest"
+    },
+    "response": {
+        "status": 200,
+        "body": "WIREMOCK IS UP",
+        "headers": {
+            "Content-Type": "text/plain"
+        }
+    }
+}

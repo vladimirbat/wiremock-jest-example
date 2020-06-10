@@ -1,0 +1,5 @@
+[
+    { "name": "tariff 1", "price": 19.99 },
+    { "name": "tariff 2", "price": 14.99 },
+    { "name": "tariff 3", "price": 24.99 }
+]

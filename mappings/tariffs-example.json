@@ -1,0 +1,10 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/tariffs"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "tariffs/get-tariffs.json"
+    }
+}
