@@ -27,19 +27,18 @@ const awaitServer = async() => {
 
 function closeServer(){
   console.log('STOPING WIREMOCK ...');
-  fetch(`http://localhost:${PORT}/__admin/shutdown`, {method: 'POST'});
+  return fetch(`http://localhost:${PORT}/__admin/shutdown`, {method: 'POST'});
 }
 
 beforeAll(awaitServer);
 afterAll(closeServer);
 
 describe("Api tests", () => {
-  it("test 2", (done) => {
-    fetch(`http://localhost:${PORT}/api/tariffs`)
+  it("test 2", () => {
+    return fetch(`http://localhost:${PORT}/api/tariffs`)
       .then((res) => res.json())
       .then((body) => {
         expect(body.length).toBe(3);
-        done();
       });
   });
 });
