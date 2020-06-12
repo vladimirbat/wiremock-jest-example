@@ -1,0 +1,10 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/tariffs/create"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "tariffs/create/post-tariff.json"
+    }
+}
