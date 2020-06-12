@@ -34,11 +34,25 @@ beforeAll(awaitServer);
 afterAll(closeServer);
 
 describe("Api tests", () => {
-  it("test 2", () => {
+  it("test get", () => {
     return fetch(`http://localhost:${PORT}/api/tariffs`)
       .then((res) => res.json())
       .then((body) => {
         expect(body.length).toBe(3);
+      });
+  });
+  it("test post", () => {
+    const tariff = {id:111, name:'barato'}
+    return fetch(`http://localhost:${PORT}/api/tariffs/create`, {
+      method: 'POST',
+      body: JSON.stringify(tariff),
+      headers: new Headers({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    })})
+      .then((res) => res.json())
+      .then((body) => {
+        expect(!!body).toBeTruthy();
       });
   });
 });
