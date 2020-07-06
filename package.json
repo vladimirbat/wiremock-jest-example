@@ -7,6 +7,7 @@
     "test": "jest",
     "test:mock": "concurrently --kill-others --names 'WIREMOCK,JEST' \"npm run wire:silent\" \"npm run test\" ",
     "wire": "wiremock --verbose --port 9999",
+    "wire:record": "concurrently --kill-others --names 'WIREMOCK,CONFIG' \"wiremock --verbose --port 9999\" \"node ./startRecordWiremock.js\" ",
     "wire:silent": "wiremock --port 9999"
   },
   "author": "",
