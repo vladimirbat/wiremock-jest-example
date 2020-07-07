@@ -105,3 +105,5 @@ dist
 
 # Private config
 privateConfig.js
+
+wiremock/
